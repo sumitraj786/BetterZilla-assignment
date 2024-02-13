@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Chatbot</title>
+</head>
+<body>
+    <h1>Fitness Chatbot</h1>
+    <form action="/ask" method="post">
+        <label for="user_info">User Info:</label>
+        <input type="text" name="user_info" required>
+        <br>
+        <label for="question">Your Question:</label>
+        <input type="text" name="question" required>
+        <br>
+        <input type="submit" value="Ask">
+    </form>
+    {% if question %}
+        <p>Your Question: {{ question }}</p>
+        <p>Chatbot's Response: {{ response }}</p>
+    {% endif %}
+</body>
+</html>
